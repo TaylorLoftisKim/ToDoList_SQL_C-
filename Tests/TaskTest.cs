@@ -8,11 +8,11 @@ namespace ToDoList
 {
   public class ToDoTest : IDisposable
   {
-    public ToDoListTest()
+    public ToDoTest()
     {
       DBConfiguration.ConnectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=ToDoList_test;Integrated Security=SSPI;";
     }
-    
+
     public void Dispose()
     {
       Task.DeleteAll();

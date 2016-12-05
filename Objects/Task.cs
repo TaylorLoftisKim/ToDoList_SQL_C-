@@ -36,9 +36,9 @@ namespace ToDoList
     {
       return _description;
     }
-    public void SetDescription()
+    public void SetDescription(string newDescription)
     {
-      _description = Description;
+      _description = newDescription;
     }
     public static List<Task> GetAll()
     {
