@@ -19,7 +19,7 @@
           <ul>
             @foreach (var task in Model)
             {
-              <li>@task.GetDescription()</li>
+              <li><strong>Due Date:</strong> @task.GetDueDate() <strong>Task:</strong> @task.GetDescription()</li>
             }
           </ul>
           <form action="/tasks/delete" method="post">

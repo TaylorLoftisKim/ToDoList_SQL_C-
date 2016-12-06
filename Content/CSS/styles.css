@@ -5,3 +5,7 @@ body {
 jumbotron {
   background-color: grey;
 }
+
+li {
+  line-height: 2em;
+}

@@ -12,16 +12,18 @@
         <h1>Add a new task</h1>
         <form action="/tasks/new" method="post">
           <label for="task-description">Task description:</label>
-            <input id="task-description" name="task-description" type="text">
-            <select name="category-id">
-              @foreach (var category in Model)
-              {
-                <option value="@category.GetId()">@category.GetName()</option>
-              }
-            </select>
-            <button type="submit">Add new task</button>
-          </form>
-          <p><a href="/">Back home</a></p>
+          <input id="task-description" name="task-description" type="text" required autofocus>
+          <label for="due-date">Task due date:</label>
+          <input id="due-date" name="due-date" type="text" required pattern="\d{4}-\d{2}-\d{2}" placeholder="Format: YYYY-MM-DD" title="Please follow the format: YYYY-MM-DD, e.g. 2016-01-22">
+          <select name="category-id">
+            @foreach (var category in Model)
+            {
+              <option value="@category.GetId()">@category.GetName()</option>
+            }
+          </select>
+          <button type="submit">Add new task</button>
+        </form>
+        <p><a href="/">Back home</a></p>
         <p><a href="/tasks">View all tasks</a></p>
       </div>
     </div>
