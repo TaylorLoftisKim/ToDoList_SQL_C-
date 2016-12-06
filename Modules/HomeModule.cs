@@ -13,8 +13,8 @@ namespace ToDoList
         return View["index.cshtml", AllCategories];
       };
       Get["/tasks"] = _ => {
-        List<Task> AllTasks = GetAll();
-        return View["tasks.cshtml", AllCategories];
+        List<Task> AllTasks = Task.GetAll();
+        return View["tasks.cshtml", AllTasks];
       };
       Get["/categories"] = _ => {
         List<Category> AllCategories = Category.GetAll();
